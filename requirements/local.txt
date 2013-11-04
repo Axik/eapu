@@ -1,0 +1,8 @@
+-r production.txt
+coverage
+django-coverage
+Fabric
+django-debug-toolbar
+ipython
+ipdb
+Sphinx
