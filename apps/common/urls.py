@@ -2,6 +2,7 @@ from django.conf import settings
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
+
 admin.autodiscover()
 
 urlpatterns = patterns(
@@ -9,7 +10,10 @@ urlpatterns = patterns(
     url(r'^admin/', include(admin.site.urls)),
     url(r'^profile/', include('profiles.urls', 'profiles')),
     url(r'^$', 'main', name='main'),
+    url(r'^ckeditor/', include('ckeditor.urls')),
+    url(r'^cathedra/', include('cathedra.urls')),
 )
+
 
 urlpatterns += patterns(
     'django.views.static',

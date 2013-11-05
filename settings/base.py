@@ -67,7 +67,9 @@ STATIC_ROOT = rel('public', 'static')
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = ()
+STATICFILES_DIRS = (
+    rel('static'),
+)
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -93,7 +95,9 @@ ROOT_URLCONF = 'common.urls'
 
 WSGI_APPLICATION = 'wsgi.application'
 
-TEMPLATE_DIRS = ()
+TEMPLATE_DIRS = (
+    rel('templates'),
+)
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
@@ -118,9 +122,12 @@ LOGIN_REDIRECT_URL = '/profile/'
 
 LOG_FILE = rel('logs', 'app.log')
 
+CKEDITOR_UPLOAD_PATH = os.path.join(PROJECT_DIR, "public/media/uploads")
+
 from .apps import *
 from .logging import *
 try:
     from .local import *
 except ImportError:
     pass
+

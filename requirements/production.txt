@@ -6,3 +6,5 @@ Unipath
 gunicorn
 django-braces
 django-spurl
+django-skd-tools==0.0.6
+django-ckeditor
