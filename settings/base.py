@@ -1,5 +1,5 @@
 import os
-
+import dj_database_url
 from unipath import Path
 
 PROJECT_DIR = Path()
@@ -27,16 +27,8 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'eapu',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
-    }
-}
+DATABASES = {'default': dj_database_url.config(default=os.environ.get('DATABASE_URL', {}))}
+
 
 CACHES = {
     'default': {
