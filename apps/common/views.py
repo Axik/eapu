@@ -3,7 +3,8 @@ from django.core.urlresolvers import reverse_lazy
 
 
 class MainView(RedirectView):
-    url = reverse_lazy('profiles:detail')
+    ### ActiveTabmixin needed
+    url = reverse_lazy('cathedra:lectors_list')
 
 
 main = MainView.as_view()

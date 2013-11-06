@@ -1,10 +1,7 @@
 from django.conf.urls import patterns, url
 from django.views.generic import TemplateView
 
-from cathedra.views import LectorsListView
 
-
-urlpatterns = patterns('',
-    url(r'^home/', TemplateView.as_view(template_name="cathedra/home.html")),
-    url(r'^lectors/', LectorsListView.as_view(), name='list'),
-)
+urlpatterns = patterns('cathedra.views',
+                       url(r'^$', TemplateView.as_view(template_name='cathedra/home.html'), name='home'),
+                       url(r'^lectors/$', 'lectors_list', name='lectors_list'),)

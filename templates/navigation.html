@@ -5,7 +5,8 @@
         <li><a href="static.html">About Us</a></li>
         <li><a href="#">Admissions</a></li>
         <li>
-          <a href="course.html">Academics</a>
+          <a {% if active_tab = 'academics' %}
+              class="selected"{% endif %}href="{% url 'cathedra:lectors_list' %}">Academics</a>
             <!-- Sub Menu level 1 -->
           <ul>
             <li><a href="course.html">Integer eu mi lorem, sit amet</a></li>

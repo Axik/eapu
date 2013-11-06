@@ -122,7 +122,7 @@ LOGIN_REDIRECT_URL = '/profile/'
 
 LOG_FILE = rel('logs', 'app.log')
 
-CKEDITOR_UPLOAD_PATH = os.path.join(PROJECT_DIR, "public/media/uploads")
+CKEDITOR_UPLOAD_PATH = MEDIA_ROOT + '/uploads/'
 
 from .apps import *
 from .logging import *
@@ -130,4 +130,3 @@ try:
     from .local import *
 except ImportError:
     pass
-

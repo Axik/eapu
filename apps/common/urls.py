@@ -11,7 +11,7 @@ urlpatterns = patterns(
     url(r'^profile/', include('profiles.urls', 'profiles')),
     url(r'^$', 'main', name='main'),
     url(r'^ckeditor/', include('ckeditor.urls')),
-    url(r'^cathedra/', include('cathedra.urls')),
+    url(r'^cathedra/', include('cathedra.urls', 'cathedra')),
 )
 
 
