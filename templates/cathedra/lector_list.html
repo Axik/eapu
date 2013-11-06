@@ -2,7 +2,19 @@
 
 {% block content %}
     {% for lector in object_list %}
-        <p>{{ lector.first_name }}</p>
+    <ul class="listing">
+        <li>
+            <div class="thumb">
+                <a href="news.html"><img src="{{MEDIA_URL}}{{ lector.photo }}"  alt=" " /></a>
+
+            </div>
+            <div class="descripton">
+               <span>{{ lector.last_name }}</span>
+               <span>{{ lector.first_name }}</span>
+               <span>{{ lector.middle_name }}</span>
+            </div>
+        </li>
+    </ul>
     {% empty %}
         <p>В базу данных пока не занесен ни один преподаватель.</p>
     {% endfor %}
