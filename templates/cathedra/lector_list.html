@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% for lector in object_list %}
+        <p>{{ lector.first_name }}</p>
+    {% empty %}
+        <p>В базу данных пока не занесен ни один преподаватель.</p>
+    {% endfor %}
+{% endblock %}
