@@ -1,8 +1,8 @@
 -r production.txt
-coverage
-django-coverage
-Fabric
-django-debug-toolbar
-ipython
-ipdb
-Sphinx
+coverage==3.7
+django-coverage==1.2.4
+Fabric==1.8.0
+django-debug-toolbar==0.10.2
+ipython==1.1.0
+ipdb==0.8
+Sphinx==1.1.3
