@@ -47,9 +47,9 @@ CACHES = {
 
 ALLOWED_HOSTS = ['*']
 
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'Europe/Kiev'
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-ru'
 
 SITE_ID = 1
 
