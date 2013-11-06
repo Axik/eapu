@@ -1,58 +1,55 @@
 <div class="navigation">
-    <div id="smoothmenu1" class="ddsmoothmenu">
+  <div id="smoothmenu1" class="ddsmoothmenu">
+
       <ul>
-        <li class="first"><a class="selected" href="index.html">Home</a></li>
-        <li><a href="static.html">About Us</a></li>
-        <li><a href="#">Admissions</a></li>
-        <li>
-          <a {% if active_tab = 'academics' %}
+          <li class="first"><a {% if active_tab = 'home' %}
+              class="selected"{% endif %} href="{% url 'cathedra:home' %}">Home</a></li>
+
+
+
+
+          <li><a href="static.html">About Us</a></li>
+          <li><a href="#">Admissions</a></li>
+          <li><a {% if active_tab = 'academics' %}
               class="selected"{% endif %}href="{% url 'cathedra:lectors_list' %}">Academics</a>
-            <!-- Sub Menu level 1 -->
-          <ul>
-            <li><a href="course.html">Integer eu mi lorem, sit amet</a></li>
-            <li><a href="course.html" class="dropdown">Accumsan neque</a>
-              !-- Sub Menu Level 2 -->
-              <ul>
-                <li><a href="course.html">nteger eu mi lorem, sit amet</a></li>
-                <li><a href="course.html">Accumsan neque</a></li>
-                <li><a href="course.html">Donec varius arcu eu quam</a></li>
-                <li><a href="course.html">Rutrum rhoncus.</a></li>
-                <li><a href="course.html">Donec suscipit enim et</a></li>
+              <!-- Sub Menu level 1 -->
+                  <ul>
+                     <li><a href="course.html">Integer eu mi lorem, sit amet</a></li>
+                      <li><a href="course.html" class="dropdown">Accumsan neque</a>
+                  <!-- Sub Menu Level 2 -->
+                        <ul>
+                          <li><a href="course.html">nteger eu mi lorem, sit amet</a></li>
+                          <li><a href="course.html">Accumsan neque</a></li>
+                          <li><a href="course.html">Donec varius arcu eu quam</a></li>
+                          <li><a href="course.html">Rutrum rhoncus.</a></li>
+                          <li><a href="course.html">Donec suscipit enim et</a></li>
+                        </ul>
+                      </li>
+                  <li><a href="course.html">Donec varius arcu eu quam</a></li>
+                  <li><a href="course.html">Rutrum rhoncus.</a></li>
+                  <li><a href="course.html">Donec suscipit enim et </a></li>
+                  <li><a href="course.html">Ipsum eleifend quis luctus</a></li>
+                  <li><a href="course.html">Arcu scelerisque.</a></li>
+                  <li><a href="course.html">Duis a tortor tellusvel egestas</a></li>
+              </ul>
+          </li>
+          <li><a href="#">Research</a> </li>
+          <li><a href="#">Campus &amp; Community</a></li>
+          <li><a href="#">Support Us</a> </li>
+          <li><a href="#">Pages</a>
+               <ul>
+                   <li><a href="index.html"  >Home</a></li>
+                  <li><a href="course.html">Courses</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                  <li><a href="blogdetail.html">Blog Detail</a></li>
+                  <li><a href="news.html">News</a></li>
+                  <li><a href="gallery.html">Gallery</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="static.html">Static</a></li>
                </ul>
-             </li>
-             <li><a href="course.html">Donec varius arcu eu quam</a></li>
-             <li><a href="course.html">Rutrum rhoncus.</a></li>
-             <li><a href="course.html">Donec suscipit enim et </a></li>
-             <li><a href="course.html">Ipsum eleifend quis luctus</a></li>
-             <li><a href="course.html">Arcu scelerisque.</a></li>
-             <li><a href="course.html">Duis a tortor tellusvel egestas</a></li>
-            </ul>
-        </li>
-        <li><a href="#">Research</a> </li>
-        <li><a href="#">Campus &amp; Community</a></li>
-        <li><a href="#">Support Us</a> </li>
-        <li><a href="#">Pages</a>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-             <li><a href="course.html">Courses</a></li>
-             <li><a href="blog.html">Blog</a></li>
-             <li><a href="blogdetail.html">Blog Detail</a></li>
-             <li><a href="news.html">News</a></li>
-             <li><a href="gallery.html">Gallery</a></li>
-             <li><a href="contact.html">Contact</a></li>
-             <li><a href="static.html">Static</a></li>
-          </ul>
-        </li>
-        <li><a href="#" class="last">Themes</a>
-              <ul>
-                <li><a href="../blue/index.html">Blue</a></li>
-                <li><a href="../green/index.html">Green</a></li>
-                <li><a href="../gray/index.html">Gray</a></li>
-                <li><a href="../teal/index.html">Teal</a></li>
-            </ul>
-        </li>
+          </li>
       </ul>
-    </div>
-         <!-- navigation ends -->
-    <div class="clear"></div>
+  </div>
+          <!-- navigation ends -->
+  <div class="clear"></div>
 </div>
