@@ -28,7 +28,7 @@ env/
 .env
 
 # Project
-/public/
+/public/media/uploads
 
 # Settings
 settings_local.py
