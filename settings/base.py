@@ -114,7 +114,13 @@ LOGIN_REDIRECT_URL = '/profile/'
 
 LOG_FILE = rel('logs', 'app.log')
 
-CKEDITOR_UPLOAD_PATH = MEDIA_ROOT + '/uploads/'
+
+def get_ckeditor_upload_path():
+    path = MEDIA_ROOT + 'upload'
+    not os.path.exists(path) and os.makedirs(path, 0775)
+    return path
+
+CKEDITOR_UPLOAD_PATH = get_ckeditor_upload_path()
 
 from .apps import *
 from .logging import *

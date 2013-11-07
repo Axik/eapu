@@ -1,0 +1,1 @@
+/home/marik/projects/eapu/static/js/jquery.fancybox-1.3.4.pack.js
