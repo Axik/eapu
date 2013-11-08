@@ -39,6 +39,9 @@ class Lector(models.Model):
     def __unicode__(self):
         return '{} {} {}'.format(self.last_name, self.first_name, self.middle_name)
 
+    def get_absolute_url(self):
+        return "/lectors/%i/" % self.id
+
 
 class Aspirant(models.Model):
     last_name = models.CharField(_('last name'), max_length=30)
@@ -53,6 +56,9 @@ class Aspirant(models.Model):
     def __unicode__(self):
         return '{} {} {}'.format(self.last_name, self.first_name, self.middle_name)
 
+    def get_absolute_url(self):
+        return "/aspirants/%i/" % self.id
+
 
 class Technician(models.Model):
     last_name = models.CharField(_('last name'), max_length=30)
@@ -66,6 +72,9 @@ class Technician(models.Model):
 
     def __unicode__(self):
         return '{} {} {}'.format(self.last_name, self.first_name, self.middle_name)
+
+    def get_absolute_url(self):
+        return "/technicians/%i/" % self.id
 
 
 class Room(models.Model):

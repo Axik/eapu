@@ -62,7 +62,7 @@
 
          {% for lector in lectors %}
           <ul class="courselisting">
-             <li class="fio"> <a href="#"> {{ lector.last_name }} {{ lector.first_name }} {{ lector.middle_name }} </a> </li>
+             <li class="fio"> <a href="{{ lector.get_absolute_url }}" > {{ lector.last_name }} {{ lector.first_name }} {{ lector.middle_name }} </a> </li>
              <li class="title_position"> {{ lector.position_title }} </li>
              <li class="title_science"> {{ lector.science_title }} </li>
          </ul>
@@ -85,7 +85,8 @@
 
          {% for aspirant in aspirants %}
           <ul class="courselisting">
-             <li class="fio"> <a href="#"> {{ aspirant.last_name }} {{ aspirant.first_name }} {{ aspirant.middle_name }} </a> </li>
+            <li class="fio"> <a href="{{ aspirant.get_absolute_url }}" > {{ aspirant.last_name }} {{ aspirant.first_name }} {{ aspirant.middle_name }} </a> </li>
+
              <li class="title_position"> {{ aspirant.position_title }} </li>
              <li class="title_science"> {{ aspirant.science_title }} </li>
          </ul>
@@ -108,7 +109,7 @@
 
          {% for technician in technicians %}
           <ul class="courselisting">
-             <li class="fio"> <a href="#"> {{ technician.last_name }} {{ technician.first_name }} {{ technician.middle_name }} </a> </li>
+             <li class="fio"> <a href="{{ technician.get_absolute_url }}" > {{ technician.last_name }} {{ technician.first_name }} {{ technician.middle_name }} </a> </li>
              <li class="title_position"> {{ technician.position_title }} </li>
              <li class="title_science"> {{ technician.science_title }} </li>
          </ul>

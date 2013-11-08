@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+     <img src="{{MEDIA_URL}}{{ aspirant.photo }}"  alt=" " />
+    <p>{{ aspirant.last_name}} {{ aspirant.first_name }}  {{aspirant.middle.name}}</p>
+    <p> Должность: {{ aspirant.position_title }}</p>
+    <p> Контактный телефон {{ aspirant.title }}</p>
+
+
+    <p>{{ aspirant.bio|safe }}</p>
+
+
+{% endblock content %}

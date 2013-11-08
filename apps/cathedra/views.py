@@ -1,4 +1,4 @@
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, DetailView
 
 from skd_tools.mixins import ActiveTabMixin
 
@@ -22,5 +22,20 @@ class HomeView(ActiveTabMixin, TemplateView):
     active_tab = 'home'
 
 
+class LectorDetailView(DetailView):
+    model = Lector
+
+
+class AspirantDetailView(DetailView):
+    model = Aspirant
+
+
+class TechnicianDetailView(DetailView):
+    model = Technician
+
+
 lectors_list = LectorsListView.as_view()
 home_view = HomeView.as_view()
+lector_detail = LectorDetailView.as_view()
+aspirant_detail = AspirantDetailView.as_view()
+technician_detail = TechnicianDetailView.as_view()

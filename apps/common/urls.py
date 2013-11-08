@@ -18,8 +18,11 @@ urlpatterns += patterns(
     url(r'^static/(.*)$', 'serve', {'document_root': settings.STATIC_ROOT}),
     url(r'^media/(.*)$', 'serve', {'document_root': settings.MEDIA_ROOT}))
 
+
 urlpatterns += patterns(
     'cathedra.views',
     url(r'^$', 'home_view', name='home'),
-    url(r'^lectors/', 'lectors_list', name='lectors_list'))
-
+    url(r'^lectors/$', 'lectors_list', name='lectors_list'),
+    url(r'^lectors/(?P<pk>\d+)/$', 'lector_detail'),
+    url(r'^aspirants/(?P<pk>\d+)/$', 'aspirant_detail'),
+    url(r'^technicians/(?P<pk>\d+)/$', 'technician_detail'))
