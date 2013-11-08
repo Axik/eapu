@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+     <img src="{{MEDIA_URL}}{{ technician.photo }}"  alt=" " />
+    <p>{{ technician.last_name}} {{ technician.first_name }}  {{technician.middle.name}}</p>
+    <p> Контактный телефон {{ technician.title }}</p>
+
+
+    <p>{{ technician.bio|safe }}</p>
+
+
+{% endblock content %}

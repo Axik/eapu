@@ -4,6 +4,8 @@
 {% block title %}Главная{% endblock title %}
 {% block content %}
 
+<div class="col1">
+
        <div id="banner">
            <div id="slider2">
                <div class="contentdiv">
@@ -42,7 +44,10 @@
                    </div>
                </div>
                </div>
-               <div id="paginate-slider2" class="pagination"></div>
+               <div id="paginate-slider2" class="pagination">
+               </div>
+
+
 
         </div>
     <!-- Content Links -->
@@ -80,6 +85,15 @@
 
      <p>В рамках выполнения совместных научных исследований между ДонНТУ и университетами Сержи-Понтуаз планируется проведение цикла лекций французскими учеными в ДонНТУ и нашими специалистами в университетах Версаля и Сержи-Понтуаз. Кафедра ведет активную работу по вхождению в международные программы «Eiffel» «Dnipro» и др.</p>
      <p>Более подробную информацию о сотрудничестве кафедры ЭАПУ с компаниями-партнерами можно получить  здесь. </p>
+
+<div class="clear"></div>
+             <!-- Content Block -->
+        {% include "contentblock.html" %}
+        <div class="clear"></div>
+        <!-- col1 ends -->
+    </div>
+  {% include "col2.html" %}
+  </div>
 
 {% endblock content %}
 

@@ -1,0 +1,16 @@
+.course_listing li.fio {
+    width:303px;
+    text-align:center;
+}
+.course_listing li.title_position {
+    width:201px;
+    text-align:center;
+}
+.course_listing li.title_science {
+    width:201px;
+    text-align:center;
+    border-right: none;
+}
+.course_listing{
+    border-bottom: none;
+}

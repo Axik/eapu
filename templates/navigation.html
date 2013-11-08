@@ -2,11 +2,11 @@
   <div id="smoothmenu1" class="ddsmoothmenu">
     <ul>
       <li class="first"><a {% if active_tab = 'home' %}
-          class="selected"{% endif %} href="{% url 'cathedra:home' %}">Home</a></li>
+          class="selected"{% endif %} href="{% url 'home' %}">Home</a></li>
       <li><a href="static.html">About Us</a></li>
       <li><a href="#">Admissions</a></li>
       <li><a {% if active_tab = 'academics' %}
-        class="selected"{% endif %}href="{% url 'cathedra:lectors_list' %}">Academics</a>
+        class="selected"{% endif %}href="{% url 'lectors_list' %}">Academics</a>
         <!-- Sub Menu level 1 -->
           <ul>
              <li><a href="course.html">Integer eu mi lorem, sit amet</a></li>

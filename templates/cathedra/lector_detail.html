@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+     <img src="{{MEDIA_URL}}{{ lector.photo }}"  alt=" " />
+    <p>{{ lector.last_name}} {{ lector.first_name }}  {{lector.middle.name}}</p>
+    <p> Должность: {{ lector.position_title }}</p>
+    <p> Научное звание: {{ lector.science_title }}</p>
+    <p> Контактный телефон {{ lector.title }}</p>
+
+
+    <p>{{ lector.bio|safe }}</p>
+
+
+{% endblock content %}
