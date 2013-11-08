@@ -9,9 +9,7 @@ urlpatterns = patterns(
     'common.views',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^profile/', include('profiles.urls', 'profiles')),
-    url(r'^$', 'main', name='main'),
-    url(r'^ckeditor/', include('ckeditor.urls')),
-    url(r'^cathedra/', include('cathedra.urls', 'cathedra')),
+    url(r'^ckeditor', include('ckeditor.urls')),
 )
 
 
@@ -19,3 +17,9 @@ urlpatterns += patterns(
     'django.views.static',
     url(r'^static/(.*)$', 'serve', {'document_root': settings.STATIC_ROOT}),
     url(r'^media/(.*)$', 'serve', {'document_root': settings.MEDIA_ROOT}))
+
+urlpatterns += patterns(
+    'cathedra.views',
+    url(r'^$', 'home_view', name='home'),
+    url(r'^lectors/', 'lectors_list', name='lectors_list'))
+
