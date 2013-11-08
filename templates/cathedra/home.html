@@ -48,6 +48,7 @@
                </div>
 
 
+
         </div>
     <!-- Content Links -->
        <div class="content_links">
@@ -96,3 +97,7 @@
 
 {% endblock content %}
 
+{% block js %}
+  {{ block.super }}
+  <script type="text/javascript" src="{{STATIC_URL}}js/slider.js" ></script>
+{% endblock js %}
