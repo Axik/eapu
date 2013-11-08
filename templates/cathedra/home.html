@@ -42,9 +42,7 @@
                    </div>
                </div>
                </div>
-               <div id="paginate-slider2" class="pagination">
-               </div>
-          <script type="text/javascript" src="{{STATIC_URL}}js/slider.js" ></script>
+               <div id="paginate-slider2" class="pagination"></div>
 
         </div>
     <!-- Content Links -->
@@ -85,3 +83,7 @@
 
 {% endblock content %}
 
+{% block js %}
+  {{ block.super }}
+  <script type="text/javascript" src="{{STATIC_URL}}js/slider.js" ></script>
+{% endblock js %}
