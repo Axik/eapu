@@ -1,4 +1,4 @@
-from django.views.generic import ListView
+from django.views.generic import ListView, TemplateView
 
 from skd_tools.mixins import ActiveTabMixin
 
@@ -10,4 +10,10 @@ class LectorsListView(ActiveTabMixin, ListView):
     active_tab = 'academics'
 
 
+class HomeView(ActiveTabMixin, TemplateView):
+    template_name = 'cathedra/home.html'
+    active_tab = 'home'
+
+
 lectors_list = LectorsListView.as_view()
+home_view = HomeView.as_view()
