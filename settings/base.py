@@ -116,7 +116,7 @@ LOG_FILE = rel('logs', 'app.log')
 
 
 def get_ckeditor_upload_path():
-    path = MEDIA_ROOT + 'upload'
+    path = MEDIA_ROOT.child('upload')
     not os.path.exists(path) and os.makedirs(path, 0775)
     return path
 
