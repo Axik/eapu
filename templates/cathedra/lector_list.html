@@ -1,21 +1,128 @@
 {% extends "base.html" %}
+{% load static %}
 
+{% block title %}Главная{% endblock title %}
 {% block content %}
-    {% for lector in object_list %}
-    <ul class="listing">
-        <li>
-            <div class="thumb">
-                <a href="news.html"><img src="{{MEDIA_URL}}{{ lector.photo }}"  alt=" " /></a>
 
-            </div>
-            <div class="descripton">
-               <span>{{ lector.last_name }}</span>
-               <span>{{ lector.first_name }}</span>
-               <span>{{ lector.middle_name }}</span>
-            </div>
-        </li>
-    </ul>
-    {% empty %}
-        <p>В базу данных пока не занесен ни один преподаватель.</p>
-    {% endfor %}
-{% endblock %}
+                    <div class="col1">
+                        <!-- Content Links -->
+                            <div class="content_links">
+                                <ul>
+                                    <li><a class="our_university" href="#">Our University</a></li>
+                                    <li><a class="admission" href="#">Admissions</a></li>
+                                    <li><a class="accommodaiton" href="#">Accommodations</a></li>
+                                    <li><a class="community" href="#">Community</a></li>
+                                    <li><a class="schorship" href="#">Scholorships</a></li>
+                                    <li class="last"><a class="take_tour" href="#">Take a Tour</a></li>
+                                </ul>
+                            </div>
+                         <!-- Content Heading -->
+                            <div class="content_heading">
+                                <div class="heading"><h2>Course Schedule</h2> </div>
+                                <div class="share"><a  href="#">Share with friends</a></div>
+                            </div>
+
+                            <span>Состав кафедры ЭАПУ</span>
+
+                             <p>
+                               Коллектив кафедры «Электропривод и автоматизация промышленных установок» Донецкого национального технического университета всю свою более чем полувековую историю стремился обучать студентов на современной лабораторной базе. На кафедре в 70-е годы благодаря стараниям основателя энергетического факультета Шумяцкого Матвея Борисовича, появились первые в институте аналоговые вычислительные машины МН7М и ЭМУ10. Один из первых комплектов серии УБСР АИ, разработанный всесоюзным институтом ВНИИЭлектропривод, был привезен из Москвы доцентом Коцегубом Павлом Харитоновичем. Большой вклад в развитие лабораторной базы внесли Бельков Валерий Аркадьевич, Шумяцкий Валерий Матвеевич, Толочко Ольга Ивановна.
+                             </p>
+                             <div class="make_slection">
+                                <span>To view the schedule for a different quarter, make your selection.</span>
+                                <select name="txt">
+                                    <option>Spring 2011</option>
+                                    <option>Spring 2011</option>
+                                    <option>Spring 2011</option>
+                                    <option>Spring 2011</option>
+                                </select>
+                             </div>
+                           <div class="clear"></div>
+                             <!-- Content Block -->
+                                <div class="listingblock">
+                                    <div class="sheading">
+                                        <div class="sheadings">
+                                            <h5>Spring 2011 Courses Schedule</h5>
+                                        </div>
+                                        <div class="sheading_action">
+                                            <div class="share left"><a href="#">Share to your friends</a></div>
+                                            <div class="print_this"><a href="#">Print This</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+
+    <!-- !!!!!!!!!!! Lectors List !!!!!!!!!!!! -->
+    <div>Преподавательский состав</div>
+      <div class="listingblock">
+         <div class="course_listing">
+         <ul class="listheading">
+             <li class="colr fio">Фамилия Имя Отчество</li>
+             <li class="colr title_position">Занимаемая должность</li>
+             <li class="colr title_science">Научное звание</li>
+         </ul>
+
+         {% for lector in lectors %}
+          <ul class="courselisting">
+             <li class="fio"> <a href="#"> {{ lector.last_name }} {{ lector.first_name }} {{ lector.middle_name }} </a> </li>
+             <li class="title_position"> {{ lector.position_title }} </li>
+             <li class="title_science"> {{ lector.science_title }} </li>
+         </ul>
+
+         {% endfor %}
+
+         <div class="clear"></div>
+        </div>
+    </div>
+
+        <div>Аспиратны</div>
+
+      <div class="listingblock">
+         <div class="course_listing">
+         <ul class="listheading">
+             <li class="colr fio">Фамилия Имя Отчество</li>
+             <li class="colr title_position">Занимаемая должность</li>
+             <li class="colr title_science">Научное звание</li>
+         </ul>
+
+         {% for aspirant in aspirants %}
+          <ul class="courselisting">
+             <li class="fio"> <a href="#"> {{ aspirant.last_name }} {{ aspirant.first_name }} {{ aspirant.middle_name }} </a> </li>
+             <li class="title_position"> {{ aspirant.position_title }} </li>
+             <li class="title_science"> {{ aspirant.science_title }} </li>
+         </ul>
+
+         {% endfor %}
+
+         <div class="clear"></div>
+        </div>
+    </div>
+
+        <div>Учебно-вспомогательный состав</div>
+
+      <div class="listingblock">
+         <div class="course_listing">
+         <ul class="listheading">
+             <li class="colr fio">Фамилия Имя Отчество</li>
+             <li class="colr title_position">Занимаемая должность</li>
+             <li class="colr title_science">Научное звание</li>
+         </ul>
+
+         {% for technician in technicians %}
+          <ul class="courselisting">
+             <li class="fio"> <a href="#"> {{ technician.last_name }} {{ technician.first_name }} {{ technician.middle_name }} </a> </li>
+             <li class="title_position"> {{ technician.position_title }} </li>
+             <li class="title_science"> {{ technician.science_title }} </li>
+         </ul>
+
+         {% endfor %}
+
+         <div class="clear"></div>
+        </div>
+    </div>
+
+                                <div class="clear"></div>
+                            <!-- col1 ends -->
+                    </div>
+  {% include "col2.html" %}
+  </div>
+
+{% endblock content %}

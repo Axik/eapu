@@ -45,6 +45,15 @@
   }
 },
 {
+  "pk": 3, 
+  "model": "cathedra.science", 
+  "fields": {
+    "description": "", 
+    "key": "asp", 
+    "title": "\u0430\u0441\u043f\u0438\u0440\u0430\u043d\u0442"
+  }
+},
+{
   "pk": 1, 
   "model": "cathedra.lector", 
   "fields": {
@@ -84,6 +93,62 @@
     "science_title": 2, 
     "contact": "0654211354", 
     "position_title": 2
+  }
+},
+{
+  "pk": 1, 
+  "model": "cathedra.aspirant", 
+  "fields": {
+    "bio": "<p>dyjkd rtp wr[wrj rt [h[oih er[ogrg</p>\r\n", 
+    "first_name": "\u0420\u043e\u043c\u0430\u043d", 
+    "last_name": "\u041b\u0438\u0442\u0432\u044f\u043a\u043e\u0432", 
+    "middle_name": "\u041d\u0438\u043a\u043e\u043b\u0430\u0435\u0432\u0438\u0447", 
+    "photo": "6adf97f83acf6453d4a6a4b1070f3754/5f4af9dd.jpg", 
+    "science_title": 3, 
+    "contact": "9849846548", 
+    "position_title": null
+  }
+},
+{
+  "pk": 2, 
+  "model": "cathedra.aspirant", 
+  "fields": {
+    "bio": "<p>\u0432\u0430\u0435\u0440\u043a\u043d \u0448 \u0445\u0448\u0449\u0443\u0435\u0433 \u0445\u0443\u0448 \u0443\u0445\u0449\u043a\u0435\u0448 \u044b\u0443\u0445\u0435\u0448\u0445\u0443\u043a\u0448 \u044b\u0445\u0443\u043a\u0448\u0449&nbsp;</p>\r\n", 
+    "first_name": "\u0421\u0435\u0440\u0433\u0435\u0439", 
+    "last_name": "\u0417\u0430\u0432\u0435\u0440\u0442\u0430\u0439\u043b\u043e", 
+    "middle_name": "\u042e\u0440\u044c\u0435\u0432\u0438\u0447", 
+    "photo": "6adf97f83acf6453d4a6a4b1070f3754/b272b75a.jpg", 
+    "science_title": 3, 
+    "contact": "7646546874", 
+    "position_title": null
+  }
+},
+{
+  "pk": 1, 
+  "model": "cathedra.technician", 
+  "fields": {
+    "bio": "<p>\u044b\u044d\u0448\u0440\u043e \u0445\u043a\u0448\u0440\u043e\u0445 \u044b\u0449\u0440\u0448</p>\r\n", 
+    "first_name": "\u042f\u0440\u043e\u0441\u043b\u0430\u0432", 
+    "last_name": "\u041b\u043e\u043c\u043e\u043d\u043e\u0441", 
+    "middle_name": "\u0413\u0435\u043d\u043d\u0430\u0434\u0438\u0435\u0432\u0438\u0447", 
+    "photo": "6adf97f83acf6453d4a6a4b1070f3754/aad7a1ac.jpg", 
+    "science_title": 3, 
+    "contact": "0456446", 
+    "position_title": null
+  }
+},
+{
+  "pk": 2, 
+  "model": "cathedra.technician", 
+  "fields": {
+    "bio": "<p>\u0435\u0440\u043e \u044b\u0440\u0448\u0449\u044b\u043e \u0445\u0440\u0448\u043e\u044b\u0430\u0445\u0440\u0448 \u043e\u044b\u0435\u0440\u0445</p>\r\n", 
+    "first_name": "\u041f\u0435\u0442\u0440", 
+    "last_name": "\u0425\u0435\u043b\u044f\u0435\u0432", 
+    "middle_name": "\u0414\u043c\u0438\u0442\u0440\u0438\u0435\u0432\u0438\u0447", 
+    "photo": "6adf97f83acf6453d4a6a4b1070f3754/1de54ae5.jpg", 
+    "science_title": 3, 
+    "contact": "3948579857", 
+    "position_title": null
   }
 },
 {
