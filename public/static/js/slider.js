@@ -1,1 +1,0 @@
-/home/marik/projects/eapu/static/js/slider.js
